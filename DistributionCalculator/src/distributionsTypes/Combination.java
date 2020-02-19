@@ -7,12 +7,11 @@ public class Combination {
 	double numerator;
 	double denominator;
 	double result;
-	public Combination(int totalInSet, int numberChosen)
+	public Combination()
 	{
-		this.totalInSet = totalInSet;
-		this.numberChosen = numberChosen;
-		result =numerator = denominator = 0;
+
 	}
+	
 	//Make this private
 	public static double factorial(int input)
 	{
@@ -29,8 +28,11 @@ public class Combination {
 		return product;
 	}
 	
-	public double getCombination()
+	public double getCombination(int totalInSet, int numberChosen)
 	{
+		this.totalInSet = totalInSet;
+		this.numberChosen = numberChosen;
+		result =numerator = denominator = 0;
 		numerator = factorial(totalInSet);
 		denominator = (factorial(totalInSet - numberChosen) * factorial(numberChosen));
 		result = numerator / denominator;
