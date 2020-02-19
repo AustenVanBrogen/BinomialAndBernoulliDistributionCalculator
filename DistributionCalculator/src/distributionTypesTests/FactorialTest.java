@@ -1,4 +1,6 @@
-package distributionsTypes;
+package distributionTypesTests;
+
+import distributionsTypes.Combination;
 
 public class FactorialTest {
 
