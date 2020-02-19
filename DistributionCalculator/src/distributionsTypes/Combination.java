@@ -2,11 +2,20 @@ package distributionsTypes;
 
 public class Combination {
 	
-
+	int totalInSet;
+	int numberChosen;
+	double numerator;
+	double denominator;
+	double result;
+	public Combination(int totalInSet, int numberChosen)
+	{
+		this.totalInSet = totalInSet;
+		this.numberChosen = numberChosen;
+		result =numerator = denominator = 0;
+	}
+	//Make this private
 	public static double factorial(int input)
 	{
-		System.out.println(input);
-		//System.out.println(input < 0);
 		if(input == 1 || input == 0)
 		{
 			return 1;
@@ -17,7 +26,16 @@ public class Combination {
 		{
 			product *= i;
 		}
-		
 		return product;
 	}
+	
+	public double getCombination()
+	{
+		numerator = factorial(totalInSet);
+		denominator = (factorial(totalInSet - numberChosen) * factorial(numberChosen));
+		result = numerator / denominator;
+		return result;
+	}
+	
+	
 }
