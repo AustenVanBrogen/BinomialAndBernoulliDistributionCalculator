@@ -1,6 +1,6 @@
 package distributionTypesTests;
 
-import distributionsTypes.Combination;
+import distributionTypes.Combination;
 
 public class CombinationsTests {
 public static void main (String [] args)

@@ -1,13 +1,14 @@
-package distributionsTypes;
+package distributionTypes;
 
 public class Combination {
 	
-	int totalInSet;
-	int numberChosen;
-	double numerator;
-	double denominator;
-	double result;
-	public Combination()
+	private int totalInSet;
+	private int numberChosen;
+	private double numerator;
+	private double denominator;
+	private double result;
+	
+	 public Combination()
 	{
 
 	}
