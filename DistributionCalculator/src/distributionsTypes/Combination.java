@@ -28,10 +28,26 @@ public class Combination {
 		return product;
 	}
 	
+	
 	public double getCombination(int totalInSet, int numberChosen)
 	{
+		if(totalInSet < 0 || numberChosen < 0)
+		{ throw new IllegalArgumentException(); }
+		
+		if(totalInSet == numberChosen)
+		{ return 1.0; }
+		
 		this.totalInSet = totalInSet;
 		this.numberChosen = numberChosen;
+		
+		//Swaps values if totalISet is less than numberChosen
+		if (totalInSet < numberChosen)
+		{ 
+			int temp = totalInSet;
+			totalInSet = numberChosen;
+			numberChosen = temp;
+		}
+		
 		result =numerator = denominator = 0;
 		numerator = factorial(totalInSet);
 		denominator = (factorial(totalInSet - numberChosen) * factorial(numberChosen));

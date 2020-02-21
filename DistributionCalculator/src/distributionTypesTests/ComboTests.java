@@ -24,6 +24,59 @@ class ComboTests {
 	}
 	
 	@Test
+	void  testTotalLessThanChosenSwap()
+	{
+		assertEquals(35.0, combo.getCombination(3, 7));
+	}
+	
+	@Test
+	void testNegativeTotal()
+	{
+		try
+		{
+			combo.getCombination(-10, 7);
+		}
+		catch(IllegalArgumentException e)
+		{
+			assertEquals(true, true);
+		}
+	}
+	
+	@Test
+	void testNegativeChosen()
+	{
+		try
+		{
+			combo.getCombination(10, -7);
+		}
+		catch(IllegalArgumentException e)
+		{
+			assertEquals(true, true);
+		}
+	}
+	
+	@Test
+	void testBothNegative()
+	{
+		try
+		{
+			combo.getCombination(-10, -7);
+		}
+		catch(IllegalArgumentException e)
+		{
+			assertEquals(true, true);
+		}
+	}
+	
+	@Test
+	void testSameNumber()
+	{
+		assertEquals(
+			combo.getCombination(Integer.MAX_VALUE, Integer.MAX_VALUE),
+			1.0);
+	}
+	
+	@Test
 	void test4and2()
 	{
 		assertEquals(6.0, combo.getCombination(4, 2));
