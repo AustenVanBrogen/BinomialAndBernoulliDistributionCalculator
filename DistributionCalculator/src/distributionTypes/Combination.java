@@ -21,7 +21,8 @@ public class Combination {
 			return 1;
 		}
 		double product = (double) input;
-		int i = Math.max(input, -input) - 1;
+		//int i = Math.max(input, -input) - 1;
+		int i = input;
 		for(; i > 1; i--)
 		{
 			product *= i;

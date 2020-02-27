@@ -10,7 +10,7 @@ public class FactorialTest {
 		double answer = Combination.factorial(5);
 		System.out.println(answer);
 		
-		answer = Combination.factorial(-4);
+		answer = Combination.factorial(4);
 		System.out.println(answer);
 	}
 
